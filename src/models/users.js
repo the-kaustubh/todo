@@ -20,9 +20,27 @@ const UserSchema = new Schema({
   mobile: {
     type: String,
   },
+  verified: {
+    type: Boolean,
+    default: false
+  },
+  resetPwdToken: {
+    type: String,
+    default: ''
+  },
   displayPicture: {
     type: String,
   },
+  preferredNotificationMode: {
+    type: String,
+    enum: [
+      'mail',
+      'sms',
+      'both',
+      'none'
+    ],
+    default: 'none'
+  }
 }, { timestamps: true })
 
 module.exports = model('users', UserSchema)

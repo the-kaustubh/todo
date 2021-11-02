@@ -28,8 +28,6 @@ router.post('/addlink')
 
 router.post('/rework')
 
-router.post('/resetPassword')
-
 router.delete('/delete')
 
 module.exports = router

@@ -12,10 +12,6 @@ router.get('/profile', (req, res) => {
   res.json({msg: "Profile Hit"})
 })
 
-router.post('/register', (req, res) => {
-  res.json({msg: "Register Hit"})
-})
-
 router.post('/update')
 
 router.post('/forgotPassword')

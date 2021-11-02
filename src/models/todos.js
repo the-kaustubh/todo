@@ -9,6 +9,10 @@ const TodoSchema = new Schema({
     type: String,
     required: true
   },
+  subTodo: {
+    type: Schema.ObjectId,
+    default: null
+  },
   links: [{
     type: Array,
     required: true
@@ -17,8 +21,15 @@ const TodoSchema = new Schema({
     type: Date
   },
   status: {
-    type: Number,
-    enum: ['Pending', 'In Progress', 'Done', 'Postponed', 'Cancelled', 'Deleted'],
+    type: String,
+    enum: [
+      'Pending',
+      'In Progress',
+      'Done',
+      'Postponed',
+      'Cancelled',
+      'Deleted'
+    ],
     default: 'Pending'
   },
   user: {
