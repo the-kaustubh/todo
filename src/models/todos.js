@@ -3,11 +3,11 @@ const { Schema, model } = require('mongoose')
 const TodoSchema = new Schema({
   title: {
     type: String,
-    required: true
+    required: [true, 'Todo should have a title']
   },
   body: {
     type: String,
-    required: true
+    required: [true, 'Todo should have a body']
   },
   subTodo: {
     type: Schema.ObjectId,
@@ -15,7 +15,6 @@ const TodoSchema = new Schema({
   },
   links: [{
     type: Array,
-    required: true
   }],
   deadline: {
     type: Date
@@ -34,7 +33,7 @@ const TodoSchema = new Schema({
   },
   user: {
     type: String,
-    required: true
+    required: [true, 'User is null']
   }
 }, { timestamps: true })
 

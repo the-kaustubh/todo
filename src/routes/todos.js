@@ -13,7 +13,7 @@ router.get('/all', authUser, async (req, res) => {
   }
 })
 
-router.get('/:id', (req, res) => {
+router.get('/due/:by', (req, res) => {
 
 })
 

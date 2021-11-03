@@ -7,56 +7,62 @@ const mockTodo = {
 }
 
 describe('Get All My Todos', () => {
-  describe('', () => {
-    it('', done => {
+  describe('GET /todos/all', () => {
+    it('Should fetch all of users todos', done => {
     })
   })
 })
 
-describe('Get specific todo', () => {
-  describe('', () => {
+describe('Get todo by deadline', () => {
+  describe('Should get today\'s todos', () => {
+    it('', done => {
+    })
+  })
+  describe('Should get week\'s todos', () => {
+    it('', done => {
+    })
+  })
+  describe('Should get month\'s todos', () => {
     it('', done => {
     })
   })
 })
 
 describe('Add new todo', () => {
-  describe('', () => {
+  describe('Should add new todo', () => {
     it('', done => {
     })
   })
 })
 
-describe('Mark as Done', () => {
-  describe('', () => {
+describe('Mark as Done and Undone', () => {
+  describe('Should mark todo as done', () => {
     it('', done => {
     })
   })
-})
-
-describe('Mark undone', () => {
-  describe('', () => {
+  describe('Should mark todo as undone', () => {
     it('', done => {
     })
   })
 })
 
 describe('Update Todo', () => {
-  describe('', () => {
+  describe('Should be able to make changes to existing todo', () => {
     it('', done => {
     })
   })
-})
-
-describe('Add link to Todo', () => {
-  describe('', () => {
+  describe('Add link to Todo', () => {
     it('', done => {
     })
   })
 })
 
 describe('Delete Todo', () => {
-  describe('', () => {
+  describe('Should delete todo', () => {
+    it('', done => {
+    })
+  })
+  describe('Previous todo should not exist', () => {
     it('', done => {
     })
   })

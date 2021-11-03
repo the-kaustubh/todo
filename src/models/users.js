@@ -19,6 +19,19 @@ const UserSchema = new Schema({
   },
   mobile: {
     type: String,
+    required: false
+  },
+  country: {
+    type: String,
+    required: false
+  },
+  lang: {
+    type: String,
+    required: false
+  },
+  theme: {
+    type: String,
+    required: false
   },
   verified: {
     type: Boolean,

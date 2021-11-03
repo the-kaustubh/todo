@@ -1,7 +1,7 @@
 const chai = require('chai')
 const app = require('../src/index')
 
-const { expect } = chai
+const { expect, before } = chai
 
 const mockUser = {
   username: 'kaustubhm',
@@ -14,21 +14,41 @@ const mockUser = {
 }
 
 describe('User Profile', () => {
-  describe('', () => {
-    it('', done => {
+  let expectedProperties = [
+    'username',
+    'email',
+    'preferredNotificationMode',
+    'verified',
+  ]
+
+  describe('GET /users/profile', () => {
+    it('Should show profile expect pwd', done => {
+      chai
+        .request(app)
+        .get('/users/profile')
+        .send()
+        .end((err, res) => {
+          if (err) done(err)
+          expect(res).to.have.status(200)
+          expect(res.body).to.not.have.property('password')
+          for (let i = 0; i < expectedProperties.length; i++ ) {
+            expect(res.body).to.have.property(expectedProperties[i])
+          }
+        })
     })
   })
 })
 
 describe('Update User', () => {
-  describe('', () => {
-    it('', done => {
+  describe('POST /users/update', () => {
+    it('Should update user data', done => {
+      done(1)
     })
   })
 })
 
 describe('Delete User', () => {
-  describe('', () => {
+  describe('DELETE /users/delete', () => {
     it('', done => {
     })
   })
