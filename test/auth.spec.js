@@ -1,5 +1,8 @@
 const chai = require('chai')
 const app = require('../src/index')
+const chaiHttp = require('chai-http')
+
+chai.use(chaiHttp)
 
 const { expect } = chai
 
@@ -8,7 +11,7 @@ const mockUser = {
   name: 'Kaustubh Murumkar',
   email: 'kau.m1999@gmail.com',
   password: 'abcd',
-  mobile: '+917083230191',
+  mobile: '+915551234555',
   verified: false,
   displayPicture: 'http://localhost/img',
 }
