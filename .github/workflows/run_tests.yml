@@ -2,10 +2,10 @@ name: run-test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   run-tests:
@@ -26,5 +26,5 @@ jobs:
       - name: Run test cases
         run: npm run test
         env:
-          DATABASE_URL: mongodb://localhost/nodes
+          DATABASE_URL: mongodb://localhost/todoapp
           ACCESS_TOKEN_SECRET: lolnosecret
