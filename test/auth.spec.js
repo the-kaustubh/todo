@@ -18,6 +18,14 @@ const mockUser = {
 
 let accessToken = ''
 
+before(async () => {
+  console.log('I am beforeAll')
+})
+
+beforeEach(async () => {
+  console.log('I am beforeEach')
+})
+
 describe('Login user', () => {
   describe("POST /auth/login", () => {
     it('Should not login for non-existent username', done => {

@@ -17,23 +17,23 @@ describe('Get All My Todos', () => {
 })
 
 describe('Get todo by deadline', () => {
-  describe('Should get today\'s todos', () => {
-    it('', done => {
+  describe('', () => {
+    it('Should get today\'s todos', done => {
     })
   })
-  describe('Should get week\'s todos', () => {
-    it('', done => {
+  describe('', () => {
+    it('Should get week\'s todos', done => {
     })
   })
-  describe('Should get month\'s todos', () => {
-    it('', done => {
+  describe('', () => {
+    it('Should get month\'s todos', done => {
     })
   })
 })
 
 describe('Add new todo', () => {
-  describe('Should add new todo', () => {
-    it('', done => {
+  describe('', () => {
+    it('Should add new todo', done => {
     })
   })
 })
